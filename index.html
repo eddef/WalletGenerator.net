@@ -51,7 +51,7 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 	GitHub Repository: https://github.com/MichaelMure/WalletGenerator.net
 	-->
 
-	<title>WalletGenerator.net - Universal Paper wallet generator for Bitcoin and other cryptocurrencies</title>
+	<title>Freicoin Paper Wallet Generator -  Universal Paper wallet generator for Freicoin and other cryptocurrencies</title>
 
 	<script type="text/javascript">
 // Array.prototype.map function is in the public domain.
@@ -9319,7 +9319,7 @@ hr { margin: 20px 0; border-top: 1px dashed #008000; }
 .keyarea .qrcode_private { display: inline-block; position: relative; top: 28px; float: right; }
 .pubkeyhex { word-wrap: break-word; }
 html { height: 100%; }
-body { font-family: Arial; background-image: url('images/diamonds.png'); height: 100%; }
+body { font-family: Arial; background:#e1e1e1; height: 100%; }
 .faqs ol { padding: 0 0 0 25px; }
 .faqs li { padding: 3px 0; }
 .question { padding: 10px 15px; text-align: left; cursor: pointer; }
@@ -9666,7 +9666,7 @@ h1 { margin: 0px; height: 91px; }
 				<img id="siteTitle" src="images/banner_beta.png" alt="Bitcoin Paper Wallet Generator" />
 			</h1>
 		</div>
-
+                
 		<div id="currencyddl" class="hide">
 			<span id="choosecurrency" class="i18n">Choose currency</span> :
 			<select id="currency" onchange="janin.currency.useCurrency(this.selectedIndex);"></select> 
@@ -9790,6 +9790,7 @@ h1 { margin: 0px; height: 91px; }
 							<b id="supportedcurrencylbl" class="i18n">Supported currencies :</b>
 							<div id="supportedcurrencies"></div>
 						</div>
+
 					</div>
 				</div>
 
@@ -10291,6 +10292,7 @@ janin.currencies = [
     janin.currency.createCurrency ("Devcoin",    0x00, 0x80, "5",    "[LK]" , "1GUeBfpVhN7xySQej3HiSe5c8jQoVQPosv"),
     janin.currency.createCurrency ("Digitalcoin",0x1e, 0x9e, "6",    "Q"    , "D7fJwPfW4dFSJNq4NHbMiYJhYnrZehMpqx"),
     janin.currency.createCurrency ("Dogecoin",   0x1e, 0x9e, "6",    "Q"    , "D74Npoqhwhjw9fShkm5wbj6DD2BJXpmzPj"),
+    janin.currency.createCurrency ("Freicoin",   0x00, 0x80, "5",    "[LK]" , "1622dNWBkdiuoYb8tFvZ6DfSZj9ntk178N"),
     janin.currency.createCurrency ("Fastcoin",   0x60, 0xe0, "8",    "a"    , "frxe8F7gQdiAVgy4mRXjpXH5vN1wyta1db"),
     janin.currency.createCurrency ("Feathercoin",0x0e, 0x8e, "5",    "N"    , "6dxAP6oacHsove5X2kZPpddcT1Am167YzC"),
     janin.currency.createCurrency ("Fluttercoin",0x23, 0xa3, "6",    "R"    , "FJioRLt3gLtqk3tUdMhwjAVo1sdWjRuwqt"),
@@ -11016,7 +11018,7 @@ ninja.translator = {
 
 	translations: {
     ﻿"en": {
-    "defaultTitle" : "WalletGenerator.net - Universal Paper wallet generator for Bitcoin and other cryptocurrencies",
+    "defaultTitle" : "Freicoin Paper Wallet Generator -  Universal Paper wallet generator for Freicoin and other cryptocurrencies",
     "title" : "Paper Wallet Generator",
     "bulkgeneratingaddresses": "Generating addresses... ",
     "brainalertpassphrasetooshort": "The passphrase you entered is too short.\n\n",
@@ -12282,7 +12284,7 @@ if (ninja.getQueryString()["showseedpool"] == "true" || ninja.getQueryString()["
 	document.getElementById("seedpoolarea").style.display = "block";
 }
 // change currency
-var currency = ninja.getQueryString()["currency"] || "bitcoin";
+var currency = ninja.getQueryString()["currency"] || "freicoin";
 currency = currency.toLowerCase();
 for(i = 0; i < janin.currencies.length; i++) {
 	if (janin.currencies[i].name.toLowerCase() == currency)
